@@ -86,6 +86,11 @@ func filter(s string, m map[string]int) map[string]int {
 		if (v>>(len(k)-len(s)) ^ mask) == 0 {
 			out[k] = v
 		}
+
+		//could have done this but this is boring :)
+		// if s == k[:len(s)-1] {
+		// 	out[k] = v
+		// }
 	}
 	return out
 }
